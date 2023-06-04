@@ -1,20 +1,17 @@
 import React from 'react';
-import Index from './routes/Index';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Register from './pages/Register';
-import Login from './pages/Login';
-import HomePage from './pages/HomePage';
-import Navbar from './layout/Navbar';
-import Profile from './pages/Profile';
-import TaskList from './pages/TaskList';
-import PageNotFound from './layout/PageNotFound';
-// import Logout from './pages/Logout';
+import Navbar from '../layout/Navbar';
+import Register from '../pages/Register';
+import Login from '../pages/Login';
+import HomePage from '../pages/HomePage';
+import TaskList from '../pages/TaskList';
+import Profile from '../pages/Profile';
+import PageNotFound from '../layout/PageNotFound';
 
-function App() {
+
+const Index = () => {
   return (
-    <div className="">
-      {/* <Index /> */}
-      <BrowserRouter>
+    <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -26,8 +23,7 @@ function App() {
           {/* <Route path="/logout" element={<Logout />} /> */}
         </Routes>
       </BrowserRouter>
-    </div>
-  );
+  )
 }
 
-export default App;
+export default Index
